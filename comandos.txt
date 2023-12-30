@@ -1,0 +1,65 @@
+git init = se ejecuta una sola vez cuando queremos que git empiece a hacer un seguimiento del proyecto en el directorio de trabajo
+
+git status -s = te muestra los archivos que hay en el disrectorio de trabajo
+
+git add = esto se hace sobre los archivos para que git los lleve desde el directorio de trabajo a la staging area. siempre despues de un cambio y antes de realizar el commit se hace un add para que git agregue esos cambios al staging area
+
+git commit = para crear el respaldo. git lleva los archivos desde staging area al repositorio local. se toma la foto (git commit -am "mensaje" se hace el add y commit en un solo paso)
+
+git log = para ver cuantas fotos tengo en el repositorio local. cuantos commit he hecho en el repo local
+
+git reset = para restaurar el archivo a cierta version (commit)
+
+git remote add origin https://github.com/yamilpalmiero/MiNuevoRepo.git = para agregarlo a github
+
+git push -u origin master = para subirlo e ir actualizandolo
+
+git pull = para traernos a local cambios que se hayan hecho en el remoto (por ejemplo editando codigo desde github)
+
+
+git init 
+git status -s
+git add index.html (. agrega todos los archivos)
+git status -s
+git commit -m "Comienzo del proyecto"
+se modifica el index en local
+git add index.html
+git status -s
+git commit -m "Se hicieron ciertos cambios"
+git log --oneline
+git reset --hard 0f45760 (codigo del commit al que queremos volver, en este caso el primero)
+git remote add origin https://github.com/yamilpalmiero/CursoGit.git
+git push -u origin master
+se modifica y commitea en master desde github
+git pull
+git tag 30-12-23v1.0 -m "Version 1 del proyecto"
+git push --tags
+borramos la carpeta de git para simular perdida de info
+
+
+
+
+vim 
+si queremos modificar la descripcion de un git commit, debemos hacerlo desde el editor vim que es un editor dentro de la consola de git para modificar cosas
+
+git commit --amend (para abrir el aditor)
+:i enter y pulsar cualquier tecla (para poder comenzar a editar)
+esc (para salir del modo de edicion)
+:wq (para guardar los cambios y salir del editor)
+
+
+tags
+nos sirven para especificar la version de nuestro desarrollo
+
+git tag nombre de la version -m "mensaje con descripcion de la version"
+git push --tags para subir las tags al repo remoto
+
+
+
+si perdieramos todo en local lo podemos volver a descargar desde github. vamos al repo, le damos al boton de descarga de code, copiar la url de clone with https y git clone url desde la consola bash situados en la carpeta local que sea nuestro nuevo repo. cuando clonemos el desarrollo en local, la carpeta que se crea con los archivos se llamara tal cual el nombre del repo remoto (CursoGit en nuestro caso)
+
+
+
+
+
+
